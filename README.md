@@ -19,15 +19,45 @@ Example output:
     $> idn-properties --file example-tables/se-yiddish.txt
     Reading allcodepoints.txt
     Reading Scripts.txt
-    # Summary (properties)
-    PVALID: 45
-    
-    # Summary (scripts)
-    Common: 11
-    Hebrew: 34
+
+    example-tables/se-yiddish.txt (PASS)
+     # Properties
+       PVALID: 45
+     # Scripts
+       Common: 11
+       Hebrew: 34
 
 A complete extended table with the derived and script properties
-can be output using the --output file option.
+can be output using the --report file option.
+
+    $> idn-properties --files example-tables/* --reportDir reports
+    Reading allcodepoints.txt
+    Reading Scripts.txt
+
+    example-tables/se-latin.txt (PASS)
+     # Properties
+       PVALID: 131
+     # Scripts
+       Common: 11
+       Latin: 120
+    reports/example-tables/se-latin.txt written
+
+    example-tables/se-sv.txt (PASS)
+     # Properties
+       PVALID: 42
+     # Scripts
+       Common: 11
+       Latin: 31
+    reports/example-tables/se-sv.txt written
+
+    example-tables/se-yiddish.txt (PASS)
+     # Properties
+       PVALID: 45
+     # Scripts
+       Common: 11
+       Hebrew: 34
+    reports/example-tables/se-yiddish.txt written
+
 
 Testing based on
 ----------------
